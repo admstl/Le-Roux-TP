@@ -1,0 +1,3 @@
+# MAQUETTE : site non indexé. À remplacer au lancement par "Allow: /" et l'adresse du sitemap (à générer avec le vrai domaine).
+User-agent: *
+Disallow: /
