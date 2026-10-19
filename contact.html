@@ -1,41 +1,128 @@
-<!DOCTYPE html>
-<html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Contact – Le Roux TP & Carrières, Landudec</title>
-<meta name="description" content="Contactez Le Roux TP & Carrières à Landudec pour un devis gratuit."><meta name="robots" content="noindex"><!-- MAQUETTE : retirer à la mise en ligne -->
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css"></head>
-<body><div class="blobs" aria-hidden="true"><i></i><i></i><i></i></div><a class="skip" href="#contenu">Aller au contenu</a>
-<header class="top">
-    <a href="index.html" aria-label="Le Roux TP & Carrières, accueil">
-      <!-- TODO : logo officiel fourni par l'entreprise -->
-      <img src="https://www.lerouxtp.fr/wp-content/uploads/2024/06/cropped-logo-Le_Roux_TP-2024_VERY_small-1.png" alt="Le Roux TP & Carrières" height="42">
-    </a>
-    <button class="burger" id="burger" aria-expanded="false" aria-controls="nav">Menu</button>
-    <nav id="nav" class="nav">
-      <a href="particuliers.html">Particuliers</a>
-      <div class="dd"><a href="index.html#metiers">Travaux publics</a><div class="dd-m"><a href="terrassement.html">Terrassement</a><a href="demolition.html">Démolition</a><a href="enrochement.html">Enrochement</a><a href="amenagement-urbain.html">Aménagement urbain</a><a href="voirie-routes.html">Voirie et routes</a><a href="plateforme-industrielle.html">Plateforme industrielle</a><a href="lotissement.html">Lotissement</a><a href="construction-immobiliere.html">Construction immobilière</a><a href="bureau-etude.html">Bureau d’étude</a><a href="parc-materiel-engins.html">Parc matériel et engins</a><a href="desamiantage.html">Désamiantage</a></div></div>
-      <a href="carriere.html">Carrière</a>
-      <a href="index.html#realisations">Réalisations</a>
-      <a class="btn small" href="index.html#contact">Devis gratuit</a>
-    </nav>
-  </header>
-<main id="contenu"><section id="contact" class="wrap contact reveal in">
-      <h2 class="center">Parlez-nous de votre projet</h2>
-            <form name="devis" method="POST" action="merci.html" data-netlify="true" netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="devis"><p hidden><label>Ne pas remplir <input name="bot-field"></label></p>
-        <label>Vous êtes<select name="profil"><option>Particulier</option><option>Entreprise</option><option>Collectivité</option></select></label>
-        <label>Nature du chantier<select name="chantier" id="f-type"><option>Allée, cour ou revêtement</option><option>Terrassement</option><option>Assainissement ou raccordement</option><option>Livraison de matériaux de carrière</option><option>Enrochement</option><option>Démolition ou désamiantage</option><option>Voirie, parking ou plateforme</option></select></label>
-        <label>Commune du chantier<input name="commune" required></label>
-        <label>Nom<input name="nom" required autocomplete="name"></label>
-        <label>Téléphone<input name="tel" type="tel" required autocomplete="tel"></label>
-        <label>E-mail<input name="email" type="email" autocomplete="email"></label>
-        <label class="full">Précisions<textarea name="message" id="f-msg" rows="4" placeholder="Accès camion, pente, période souhaitée…"></textarea></label>
-        <button class="btn" type="submit">Envoyer ma demande</button>
-      </form>
-    </section></main>
-<footer class="foot"><div>
-    <p><b>Le Roux TP & Carrières</b><br>Landudec, Finistère · <a href="tel:+33298515262" style="margin:0">02 98 51 52 62</a></p>
-    <p><a href="carriere.html">Carrière</a><a href="mentions-legales.html">Mentions légales</a><a href="https://www.leroux3d.fr" rel="noopener">Le Roux 3D</a><a href="https://www.guenneautp.fr/" rel="noopener">Guenneau TP</a><a href="https://www.linkedin.com/company/le-roux-tp-carrieres/" rel="noopener">LinkedIn</a><a href="https://www.facebook.com/Le-Roux-TP-et-Carri%C3%A8res-2203684319895262" rel="noopener">Facebook</a></p>
-  </div></footer>
-<script src="js/main.js"></script><script src="js/effects.js"></script></body></html>
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact – Le Roux TP & Carrières, Landudec</title>
+    <meta name="description" content="Contactez Le Roux TP & Carrières à Landudec pour un devis gratuit."/>
+    <meta name="robots" content="noindex" />
+    <!-- MAQUETTE : retirer à la mise en ligne -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..800&display=swap"
+      rel="stylesheet"/>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="blobs" aria-hidden="true">
+      <i></i>
+      <i></i>
+      <i></i>
+    </div>
+    <a class="skip" href="#contenu">Aller au contenu</a>
+    <header class="top">
+      <a href="index.html" aria-label="Le Roux TP & Carrières, accueil">
+        <!-- TODO : logo officiel fourni par l'entreprise -->
+        <img
+          src="https://www.lerouxtp.fr/wp-content/uploads/2024/06/cropped-logo-Le_Roux_TP-2024_VERY_small-1.png"
+          alt="Le Roux TP & Carrières"
+          height="42"/>
+      </a>
+      <button
+        class="burger"
+        id="burger"
+        aria-expanded="false"
+        aria-controls="nav">
+        Menu
+      </button>
+      <nav id="nav" class="nav">
+        <a href="particuliers.html">Particuliers</a>
+        <div class="dd">
+          <a href="index.html#metiers">Travaux publics</a>
+          <div class="dd-m">
+            <a href="terrassement.html">Terrassement</a>
+            <a href="demolition.html">Démolition</a>
+            <a href="enrochement.html">Enrochement</a>
+            <a href="amenagement-urbain.html">Aménagement urbain</a>
+            <a href="voirie-routes.html">Voirie et routes</a>
+            <a href="plateforme-industrielle.html">Plateforme industrielle</a>
+            <a href="lotissement.html">Lotissement</a>
+            <a href="construction-immobiliere.html">Construction immobilière</a>
+            <a href="bureau-etude.html">Bureau d’étude</a>
+            <a href="parc-materiel-engins.html">Parc matériel et engins</a>
+            <a href="desamiantage.html">Désamiantage</a>
+          </div>
+        </div>
+        <a href="carriere.html">Carrière</a>
+        <a href="index.html#realisations">Réalisations</a>
+        <a class="btn small" href="index.html#contact">Devis gratuit</a>
+      </nav>
+    </header>
+    <main id="contenu">
+      <section id="contact" class="wrap contact reveal in">
+        <h2 class="center">Parlez-nous de votre projet</h2>
+        <form
+          name="devis"
+          method="POST"
+          action="merci.html"
+          data-netlify="true"
+          netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="devis"/>
+          <p hidden>
+            <label>Ne pas remplir <input name="bot-field"/></label>
+          </p>
+          <label
+            >Vous êtes<select name="profil">
+              <option>Particulier</option>
+              <option>Entreprise</option>
+              <option>Collectivité</option>
+            </select>
+          </label>
+          <label>Nature du chantier
+            <select name="chantier" id="f-type">
+              <option>Allée, cour ou revêtement</option>
+              <option>Terrassement</option>
+              <option>Assainissement ou raccordement</option>
+              <option>Livraison de matériaux de carrière</option>
+              <option>Enrochement</option>
+              <option>Démolition ou désamiantage</option>
+              <option>Voirie, parking ou plateforme</option>
+            </select>
+          </label>
+          <label>Commune du chantier<input name="commune" required/></label>
+          <label>Nom<input name="nom" required autocomplete="name"/></label>
+          <label>Téléphone<input name="tel" type="tel" required autocomplete="tel"/></label>
+          <label>E-mail<input name="email" type="email" autocomplete="email"/></label>
+          <label class="full">Précisions
+            <textarea
+              name="message"
+              id="f-msg"
+              rows="4"
+              placeholder="Accès camion, pente, période souhaitée…">
+            </textarea>
+          </label>
+          <button class="btn" type="submit">Envoyer ma demande</button>
+        </form>
+      </section>
+    </main>
+    <footer class="foot">
+      <div>
+        <p>
+          <b>Le Roux TP & Carrières</b><br />Landudec, Finistère ·
+          <a href="tel:+33298515262" style="margin: 0">02 98 51 52 62</a>
+        </p>
+        <p>
+          <a href="carriere.html">Carrière</a>
+          <a href="mentions-legales.html">Mentions légales</a>
+          <a href="https://www.leroux3d.fr" rel="noopener">Le Roux 3D</a>
+          <a href="https://www.guenneautp.fr/" rel="noopener">Guenneau TP</a>
+          <a href="https://www.linkedin.com/company/le-roux-tp-carrieres/" rel="noopener">LinkedIn</a>
+          <a href="https://www.facebook.com/Le-Roux-TP-et-Carri%C3%A8res-2203684319895262" rel="noopener">Facebook</a>
+        </p>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/effects.js"></script>
+  </body>
+</html>
