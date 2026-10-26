@@ -217,6 +217,8 @@ h3 {
   border-color: var(--line);
 }
 .btn.light:hover {
+  background: var(--blue);
+  border-color: var(--blue);
   color: #fff;
 }
 /* hero */
@@ -775,7 +777,9 @@ dialog .nv {
   box-shadow: var(--shadow);
   border: 1px solid var(--line);
 }
-.contact .full,
+.contact .full {
+  grid-column: 1/-1;
+}
 .contact .btn {
   grid-column: 1/-1;
   justify-content: center;
@@ -1157,4 +1161,167 @@ dialog .nv {
 }
 .hero.sm + .photo {
   margin-top: 8px;
+}
+
+/* ===== v4 ===== */
+.dd-i {
+  display: grid;
+}
+.dd-t {
+  font-size: 0;
+}
+/* carrière : infos + carte réelle */
+.infos {
+  display: grid;
+  gap: 12px;
+  margin: 22px 0 26px;
+}
+.info {
+  padding: 16px 20px;
+  border-radius: 18px;
+  display: grid;
+  gap: 2px;
+}
+.info b {
+  font-size: 1.05rem;
+}
+.info span {
+  color: var(--sub);
+}
+.mapbox iframe {
+  display: block;
+  width: 100%;
+  height: 340px;
+  border: 0;
+  border-radius: 18px;
+  background: var(--soft);
+}
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.chips span {
+  padding: 6px 14px;
+  border-radius: 99px;
+  background: var(--soft);
+  border: 1px solid var(--line);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+/* galerie */
+.im.noimg {
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #dbe7f1, #f3ead7);
+}
+.im.noimg img {
+  display: none;
+}
+.im.noimg::after {
+  content: "Photo à venir";
+  color: var(--sub);
+  font-weight: 600;
+}
+@media (min-width: 861px) {
+  .dd-t {
+    display: none;
+  }
+}
+@media (max-width: 860px) {
+  .nav {
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition:
+      opacity 0.25s,
+      transform 0.25s,
+      visibility 0.25s;
+  }
+  .nav.open {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+  .nav.open > * {
+    animation: navin 0.45s both;
+  }
+  .nav.open > *:nth-child(2) {
+    animation-delay: 0.06s;
+  }
+  .nav.open > *:nth-child(3) {
+    animation-delay: 0.12s;
+  }
+  .nav.open > *:nth-child(4) {
+    animation-delay: 0.18s;
+  }
+  .nav.open > *:nth-child(5) {
+    animation-delay: 0.24s;
+  }
+  .nav a {
+    font-size: 1.05rem;
+    padding: 12px 14px;
+  }
+  .dd {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+  .dd-t {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    cursor: pointer;
+  }
+  .dd-t::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    transform: translateY(-2px) rotate(45deg);
+    transition: transform 0.3s;
+  }
+  .dd.open .dd-t::before {
+    transform: translateY(2px) rotate(225deg);
+  }
+  .dd-m {
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-rows: 0fr;
+    padding: 0;
+    margin: 0;
+    min-width: 0;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    transition: grid-template-rows 0.35s ease;
+  }
+  .dd.open .dd-m {
+    grid-template-rows: 1fr;
+  }
+  .dd-i {
+    overflow: hidden;
+    min-height: 0;
+    padding-left: 12px;
+  }
+  .dd-m a {
+    font-size: 0.95rem;
+    padding: 9px 12px;
+  }
+  .mapbox iframe {
+    height: 260px;
+  }
+}
+@keyframes navin {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
 }
